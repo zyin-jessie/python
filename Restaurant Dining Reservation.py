@@ -53,8 +53,8 @@ class ReservationSystem:
             print("No reservations found.\n")
             return
         print("\n#\t\tDate\t\t\t\tTime\t\tName\t\t\t\t\tAdults\tChildren")
-        for idx, res in enumerate(self.reservations, 1):
-            print(f"{idx:<8}{res.date:<20}{res.time:<12}{res.name:<24}{res.adults:<8}{res.children}")
+        for number, res in enumerate(self.reservations, 1):
+            print(f"{number:<8}{res.date:<20}{res.time:<12}{res.name:<24}{res.adults:<8}{res.children}")
 
     def make_reservation(self):
         try:
@@ -98,8 +98,8 @@ class ReservationSystem:
         total_adults = 0
         total_kids = 0
         grand_total = 0
-        for idx, reservation in enumerate(self.reservations, 1):
-            print(f"{idx:<8}{reservation.date:<20}{reservation.time:<12}{reservation.name:<24}{reservation.adults:<8}{reservation.children:<16}{reservation.subtotal:.2f}")
+        for number, reservation in enumerate(self.reservations, 1):
+            print(f"{number:<8}{reservation.date:<20}{reservation.time:<12}{reservation.name:<24}{reservation.adults:<8}{reservation.children:<16}{reservation.subtotal:.2f}")
             total_adults += reservation.adults
             total_kids += reservation.children
             grand_total += reservation.subtotal
