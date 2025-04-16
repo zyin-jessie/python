@@ -54,7 +54,6 @@ class ReservationSystem:
             return
         print("\n#\t\tDate\t\t\t\tTime\t\tName\t\t\t\t\tAdults\tChildren")
         for idx, res in enumerate(self.reservations, 1):
-            #print(f"{idx}\t\t{res.date}\t\t{res.time}\t\t{res.name}\t\t{res.adults}\t\t{res.children}")
             print(f"{idx:<8}{res.date:<20}{res.time:<12}{res.name:<24}{res.adults:<8}{res.children}")
 
     def make_reservation(self):
